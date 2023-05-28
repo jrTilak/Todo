@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Todo</title>
+</head>
+
+<body>
+    <h1 class="greetings">
+        <span class="title">What's up, </span>
+        <input type="text" name="title" id="greetings__title" placeholder="your name">
+    </h1>
+
+    <form class="create-todo">
+        <div class="create-todo__title">
+            <h3 class="title">Let's add a todo!</h3>
+            <input type="text" name="todo-title" id="todo-title" placeholder="e.g. Eat some rawmen">
+        </div>
+        <div class="create-todo__category">
+            <h3 class="title">Select a Category</h3>
+            <div class="select-category">
+                <input type="radio" name="select-category" id="select-category">
+                <span>Home</span>
+            </div>
+            <div class="select-category">
+                <input type="radio" name="select-category" id="select-category">
+                <span>School</span>
+            </div>
+        </div>
+        <button type="submit">ADD TODO</button>
+    </form>
+    <section class="todo-container">
+        <h1>Todo List</h1>
+        <div class="todo-item">
+            <div class="left">
+                <input type="checkbox">
+                <span class="todo-item__title">Eat some rawmen</span>
+            </div>
+            <div class="right">
+                <button class="edit" type="button">
+                    <i class='bx bx-edit-alt'></i>
+                </button>
+                <button class="delete" type="button">
+                    <i class='bx bx-trash'></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+
+</html>
