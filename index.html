@@ -10,7 +10,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
     <link rel="manifest" href="./assets/site.webmanifest">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Todo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Todo -jrTilak</title>
 </head>
 
 <body>
@@ -22,36 +23,87 @@
     <form class="create-todo">
         <div class="create-todo__title">
             <h3 class="title">Let's add a todo!</h3>
-            <input type="text" name="todo-title" id="todo-title" placeholder="e.g. Eat some rawmen">
+            <input required type="text" name="todo-title" id="todo-title" placeholder="e.g. Eat some rawmen">
         </div>
         <div class="create-todo__category">
             <h3 class="title">Select a Category</h3>
-            <div class="select-category">
-                <input type="radio" name="select-category" id="select-category">
-                <span>Home</span>
-            </div>
-            <div class="select-category">
-                <input type="radio" name="select-category" id="select-category">
-                <span>School</span>
+            <div class="options">
+                <!-- <label>
+                    <i class='bx bx-plus-medical'></i>
+                    <div>New</div>
+                </label> -->
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal" />
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal" />
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category1" value="business" />
+                    <span class="bubble business"></span>
+                    <div>Business</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal" />
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal" />
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category1" value="business" />
+                    <span class="bubble business"></span>
+                    <div>Business</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal" />
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal" />
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+                </label>
             </div>
         </div>
-        <button type="submit">ADD TODO</button>
+        <div class="form-control">
+            <button class="add-todo" type="submit">ADD TODO</button>
+            <button class="remove-all" type="button">
+                <i class='bx bx-trash'></i>
+            </button>
+        </div>
     </form>
-    <section class="todo-container">
-        <h1>Todo List</h1>
-        <div class="todo-item">
-            <div class="left">
-                <input type="checkbox">
-                <span class="todo-item__title">Eat some rawmen</span>
-            </div>
-            <div class="right">
-                <button class="edit" type="button">
-                    <i class='bx bx-edit-alt'></i>
-                </button>
-                <button class="delete" type="button">
-                    <i class='bx bx-trash'></i>
-                </button>
-            </div>
+    <section class="todo-list">
+        <h3 class="title">Todo List</h3>
+        <div class="list" id="todo-list">
+            <form class="todo-item">
+                <label>
+                    <input type="checkbox">
+                    <span class="bubble business"></span>
+                </label>
+                <div class="todo-content">
+                    <input type="text" value="afg" readonly="">
+                </div>
+                <div class="actions">
+                    <button type="button" class="edit">
+                        <i class='bx bx-edit-alt'></i>
+                    </button>
+                    <button type="submit" class="edit check" style="display: none;">
+                        <i class='bx bx-check'></i>
+                    </button>
+                    <button type="button" class="delete">
+                        <i class='bx bx-x'></i>
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
     <footer></footer>
