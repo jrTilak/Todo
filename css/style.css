@@ -285,18 +285,80 @@ button.remove-all {
 }
 
 @media screen and (max-width: 750px) {
-    body{
+    body {
         margin: 1rem;
     }
+
     h1.greetings .title {
         font-size: 2rem;
     }
 
     h1.greetings input {
-        outline: none;
-        border: none;
         font-size: 1.1rem;
         width: calc(100% - 150px);
     }
 
+    .create-todo__title .title {
+        font-size: 1.2rem;
+    }
+
+    .create-todo__title input {
+        font-size: 1.3rem;
+        padding: 0.4rem;
+    }
+
+    .create-todo__category .title {
+        font-size: 1rem;
+    }
+
+    .create-todo .options label {
+        padding: 0.2rem;
+        width: 7rem;
+    }
+
+    .create-todo .options {
+        grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+        margin-bottom: 0;
+    }
+
+    .create-todo .options label div {
+        font-size: 1rem;
+    }
+
+    .bubble {
+        height: 12px;
+        width: 12px;
+    }
+
+    input:checked~.bubble::after {
+        height: 7px;
+        width: 7px;
+    }
+
+    button.add-todo {
+        font-size: .8rem;
+        margin: 1rem;
+        margin-right: .2rem;
+        border-radius: .5rem;
+    }
+
+    button.remove-all {
+        font-size: 1.2rem;
+        border-radius: .5rem;
+    }
+
+    .form-control {
+        left: 0;
+    }
+
+    .todo-list .title {
+        font-size: 1.8rem;
+    }
+
+    .actions button i {
+        font-size: 1rem;
+    }
+        .todo-item .actions button{
+            padding: .3rem .2rem .1rem .2rem;
+        }
 }
