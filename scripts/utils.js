@@ -65,6 +65,9 @@ let listTodo = (fetchedList) => {
             checkbox.type = "checkbox";
             let bubble = document.createElement("span");
             bubble.className = "bubble business";
+            if (elem.isCompleted === true) {
+                checkbox.setAttribute("checked", true)
+            }
 
             // Append checkbox and bubble to the label
             label.appendChild(checkbox);
@@ -78,6 +81,9 @@ let listTodo = (fetchedList) => {
             todoInput.value = elem.title;
             todoInput.readOnly = true;
             todoContent.appendChild(todoInput);
+            if (elem.isCompleted === true) {
+                todoInput.style.textDecoration = "line-through"
+            }
 
             // Create the actions container element
             let actions = document.createElement("div");
@@ -119,6 +125,18 @@ let listTodo = (fetchedList) => {
             form.appendChild(actions);
 
             // Add event listener to the delete button
+            checkbox.addEventListener("click", () => {
+                let todoArr = fetchTodo()
+                if (elem.isCompleted === false) {
+                    changeStatus(todoArr, elem.createdAt, true)
+                }
+                else {
+                    changeStatus(todoArr, elem.createdAt, false)
+                }
+                todoArr = JSON.stringify(todoArr)
+                localStorage.setItem("todos", todoArr)
+                listTodo(fetchTodo())
+            })
             deleteButton.addEventListener("click", () => {
                 deleteTodoItem__fn(elem.createdAt);
             });
@@ -128,7 +146,6 @@ let listTodo = (fetchedList) => {
                 // todoInput.select();
                 editButton.style.display = "none";
                 editCheckButton.style.display = "inline";
-
             })
 
             editCheckButton.addEventListener("click", (e) => {
@@ -162,6 +179,15 @@ function changeTitle(objectsArray, targetTitle, newTitle) {
     // If the object is found, update its title
     if (targetObject) {
         targetObject.title = newTitle;
+    }
+}
+function changeStatus(objectsArray, createdAt, newStatus) {
+    // Find the object with the matching createdAt value
+    let targetObject = objectsArray.find(obj => obj.createdAt === createdAt);
+
+    // If the object is found, update its title
+    if (targetObject) {
+        targetObject.isCompleted = newStatus;
     }
 }
 
