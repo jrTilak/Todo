@@ -17,13 +17,13 @@
 <body>
     <h1 class="greetings">
         <span class="title">What's up, </span>
-        <input type="text" name="title" id="greetings__title" placeholder="your name">
+        <input autocomplete="off" type="text" name="title" id="greetings__title" placeholder="your name">
     </h1>
 
     <form class="create-todo">
         <div class="create-todo__title">
-            <h3 class="title">Let's add a todo!</h3>
-            <input required type="text" name="todo-title" id="todo-title" placeholder="e.g. Eat some rawmen">
+            <h3 class="title">Let's add some todo!</h3>
+            <input autocomplete="off" type="text" name="content" id="todo-title" placeholder="e.g. Eat some rawmen">
         </div>
         <div class="create-todo__category">
             <h3 class="title">Select a Category</h3>
@@ -85,28 +85,15 @@
         <h3 class="title">Todo List</h3>
         <div class="list" id="todo-list">
             <form class="todo-item">
-                <label>
-                    <input type="checkbox">
-                    <span class="bubble business"></span>
-                </label>
-                <div class="todo-content">
-                    <input type="text" value="afg" readonly="">
-                </div>
-                <div class="actions">
-                    <button type="button" class="edit">
-                        <i class='bx bx-edit-alt'></i>
-                    </button>
-                    <button type="submit" class="edit check" style="display: none;">
-                        <i class='bx bx-check'></i>
-                    </button>
-                    <button type="button" class="delete">
-                        <i class='bx bx-x'></i>
-                    </button>
+                <div class="todo-content" style="text-align: center;">
+                    <input type="text" value="No Todos to show. Let's add some!!" readonly="">
                 </div>
             </form>
         </div>
     </section>
     <footer></footer>
 </body>
+<script src="scripts/utils.js"></script>
+<script src="scripts/index.js"></script>
 
 </html>

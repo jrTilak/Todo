@@ -21,6 +21,7 @@
     box-sizing: border-box;
     font-family: 'Charm', cursive;
     background: #EEE;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -281,4 +282,21 @@ button.remove-all {
 .todo-item.done .todo-content input {
     text-decoration: line-through;
     color: var(--grey);
+}
+
+@media screen and (max-width: 750px) {
+    body{
+        margin: 1rem;
+    }
+    h1.greetings .title {
+        font-size: 2rem;
+    }
+
+    h1.greetings input {
+        outline: none;
+        border: none;
+        font-size: 1.1rem;
+        width: calc(100% - 150px);
+    }
+
 }
