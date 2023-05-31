@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Charm&family=Kaushan+Script&display=swap');
+/* css resets */
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +37,7 @@ body {
     margin-right: 3rem;
 }
 
-/* h1  */
+/* styles */
 h1.greetings .title {
     font-size: 2.5rem;
 }
@@ -46,7 +47,11 @@ h1.greetings input {
     border: none;
     font-size: 1.5rem;
 }
-
+h1.greetings input:focus{
+    padding-left: .3rem;
+    border: 2px solid rgb(54, 12, 159);
+    border-radius: .2rem;
+}
 .create-todo {
     margin-top: 1rem;
 }

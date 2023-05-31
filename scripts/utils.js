@@ -1,9 +1,11 @@
+// Define a constructor function for creating Todo objects
 let Todo = function (title, createdAt, isCompleted = false) {
     this.title = title;
     this.isCompleted = isCompleted;
     this.createdAt = createdAt;
 }
 
+// Define a function to get the user's name and store it in local storage
 let getName = () => {
     let greetings__title = document.querySelector("#greetings__title")
     greetings__title.addEventListener("change", () => {
@@ -14,9 +16,14 @@ let getName = () => {
         greetings__title.focus()
     }
     greetings__title.value = username;
+    greetings__title.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            event.target.blur();
+        }
+    })
 }
 
-
+// Define a function to get the todo item from the form
 let getTodo = () => {
     let form = document.querySelector("form.create-todo");
     let content = form.elements.content.value;
@@ -28,6 +35,7 @@ let getTodo = () => {
     return null;
 }
 
+// Define a function to save a new todo item to local storage
 let saveTodo = (newTodo) => {
     let todoList = fetchTodo()
     todoList.unshift(newTodo)
@@ -35,18 +43,21 @@ let saveTodo = (newTodo) => {
     localStorage.setItem("todos", todoList)
 }
 
+// Define a function to fetch the todo list from local storage
 let fetchTodo = () => {
     try {
         return (JSON.parse(localStorage.getItem("todos")) || []);
     } catch (error) {
-        console.error("Donot modify the content of Local Storage JSON");
+        console.error("Do not modify the content of Local Storage JSON");
         localStorage.clear();
         return [];
     }
 }
 
+// Define a function to list the todo items on the page
 let listTodo = (fetchedList) => {
     let todoList = document.querySelector("#todo-list");
+    let todoCount = 0
     todoList.textContent = ""; // Clear existing content
     if (fetchedList.length >= 1) {
         fetchedList.forEach((elem) => {
@@ -156,19 +167,19 @@ let listTodo = (fetchedList) => {
                 localStorage.setItem("todos", todoArr)
                 listTodo(fetchTodo())
             })
-
-
-
             // Append the form to the todoList
             todoList.appendChild(form);
+            todoCount++;
         });
     }
     else {
         noTodos()
-    }    
+    }
+    document.querySelector(".todo-list .title").innerText = `Todo Lists (${todoCount})`
 };
 
-function changeTitle(objectsArray, targetTitle, newTitle) {
+// Define a function to change the title of a todo item
+let changeTitle = (objectsArray, targetTitle, newTitle) => {
     // Find the object with the matching createdAt value
     let targetObject = objectsArray.find(obj => obj.title === targetTitle);
 
@@ -177,17 +188,19 @@ function changeTitle(objectsArray, targetTitle, newTitle) {
         targetObject.title = newTitle;
     }
 }
-function changeStatus(objectsArray, createdAt, newStatus) {
+
+// Define a function to change the status (completed or not) of a todo item
+let changeStatus = (objectsArray, createdAt, newStatus) => {
     // Find the object with the matching createdAt value
     let targetObject = objectsArray.find(obj => obj.createdAt === createdAt);
 
-    // If the object is found, update its title
+    // If the object is found, update its status
     if (targetObject) {
         targetObject.isCompleted = newStatus;
     }
 }
 
-
+// Define a function to display a message when there are no todos
 let noTodos = () => {
     document.querySelector("#todo-list").innerHTML = `
     <form class="todo-item">
@@ -198,7 +211,7 @@ let noTodos = () => {
     `
 }
 
-
+// Define a function to delete a todo item
 let deleteTodoItem__fn = (id) => {
     let allTodo = fetchTodo();
     allTodo = allTodo.filter((elem) => { return elem.createdAt !== id })
@@ -206,5 +219,3 @@ let deleteTodoItem__fn = (id) => {
     localStorage.setItem("todos", allTodo)
     listTodo(fetchTodo())
 }
-
-
