@@ -87,28 +87,6 @@ h1.greetings input {
     outline: none;
 }
 
-.create-todo__category .title {
-    font-weight: 600;
-}
-
-.category-list {
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: 1rem;
-}
-
-.category-list label {
-    border-radius: .5rem;
-    padding: 1.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.category-list label,
-.category-list label span {
-    background: #fff;
-}
-
 /* bubble  */
 .create-todo .options {
     margin-top: 1rem;
@@ -291,38 +269,6 @@ button.remove-all {
     color: var(--grey);
 }
 
-.add-new-category {
-    display: none;
-    margin: 1rem;
-}
-
-.add-new-category input {
-    font-size: 1.3rem;
-    padding: .3rem;
-    margin: 0.5rem;
-    border-radius: 0.5rem;
-    background: #fff;
-    border: 3px solid #e4e4e4;
-    outline: none;
-}
-
-.add-new-category button {
-    margin: .7rem;
-    display: block;
-    padding: 0.1rem;
-    border-radius: 0.25rem;
-    color: #FFF;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    margin-right: 0.5rem;
-    margin-left: 0;
-    background-color: var(--primary);
-}
-
-.add-new-category button i {
-    font-size: 2rem;
-    background: none;
-}
 
 @media screen and (max-width: 750px) {
     body {
@@ -347,9 +293,6 @@ button.remove-all {
         padding: 0.4rem;
     }
 
-    .create-todo__category .title {
-        font-size: 1rem;
-    }
 
     .create-todo .options label {
         padding: 0.2rem;
@@ -400,34 +343,6 @@ button.remove-all {
 
     .todo-item .actions button {
         padding: .3rem .2rem .1rem .2rem;
-    }
-
-    .add-new-category input {
-        font-size: .9rem;
-        padding: .3rem;
-        margin: 0.5rem;
-        border-radius: 0.5rem;
-        background: #fff;
-        border: 3px solid #e4e4e4;
-        outline: none;
-    }
-
-    .add-new-category button {
-        margin: .7rem;
-        display: block;
-        padding: 0.1rem;
-        border-radius: 0.25rem;
-        color: #FFF;
-        cursor: pointer;
-        transition: 0.2s ease-in-out;
-        margin-right: 0.5rem;
-        margin-left: 0;
-        background-color: var(--primary);
-        padding: 0.3rem;
-    }
-
-    .add-new-category button i {
-        font-size: 1rem;
     }
 }
 
