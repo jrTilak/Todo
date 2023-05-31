@@ -28,31 +28,13 @@
         <div class="create-todo__category">
             <h3 class="title">Select a Category</h3>
             <div class="options">
-                <!-- <label>
-                    <i class='bx bx-plus-medical'></i>
-                    <div>New</div>
-                </label> -->
-                <label>
-                    <input type="radio" name="category" id="category2" value="personal" />
-                    <span class="bubble personal"></span>
-                    <div>Home</div>
-                </label>
-                <label>
-                    <input type="radio" name="category" id="category2" value="personal" />
-                    <span class="bubble personal"></span>
-                    <div>Personal</div>
-                </label>
-                <label>
-                    <input type="radio" name="category" id="category1" value="business" />
-                    <span class="bubble business"></span>
-                    <div>Business</div>
-                </label>
-                <label>
-                    <input type="radio" name="category" id="category2" value="personal" />
-                    <span class="bubble personal"></span>
-                    <div>School</div>
-                </label>
             </div>
+        </div>
+        <div class="add-new-category">
+            <input autocomplete="off" type="text" name="newCategory" id="newCategory" placeholder="e.g. Home">
+            <button id="add-new-category__button" type="button">
+                <i class='bx bx-check-double'></i>
+            </button>
         </div>
         <div class="form-control">
             <button class="add-todo" type="submit">ADD TODO</button>

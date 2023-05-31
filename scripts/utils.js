@@ -51,9 +51,24 @@ let fetchTodo = () => {
 let listTodo = (fetchedList) => {
     let todoList = document.querySelector("#todo-list");
     todoList.textContent = ""; // Clear existing content
-
+    let categories = new Set;
+    let categoriesOption = document.querySelector(".options")
+    categoriesOption.innerHTML = `
+                <label id="add-new-custom-category">
+                    <i class='bx bx-plus-medical'></i>
+                    <div>New</div>
+                </label>
+                <label>
+                    <input checked type="radio" name="category" id="category__none" value="none" />
+                    <span class="bubble radio_none"></span>
+                    <div>None</div>
+                </label>
+            `
     if (fetchedList.length >= 1) {
         fetchedList.forEach((elem) => {
+            //get categories
+            categories.add(elem.category);
+
             // Create the form element
             let form = document.createElement("form");
             form.className = "todo-item";
@@ -170,6 +185,20 @@ let listTodo = (fetchedList) => {
     else {
         noTodos()
     }
+    //set categories
+    categories.forEach((elem__cat) => {
+        if (elem__cat !== "none") {
+            categoriesOption.innerHTML += `
+                    <label>
+                        <input type="radio" name="category" id="category__${elem__cat}" value="${elem__cat}" />
+                        <span class="bubble ${elem__cat}"></span>
+                        <div>${elem__cat}</div>
+                    </label>
+                    `
+        }
+    })
+
+    
 };
 
 function changeTitle(objectsArray, targetTitle, newTitle) {
@@ -210,3 +239,5 @@ let deleteTodoItem__fn = (id) => {
     localStorage.setItem("todos", allTodo)
     listTodo(fetchTodo())
 }
+
+
