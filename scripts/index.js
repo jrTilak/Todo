@@ -7,7 +7,10 @@ document.querySelector(".add-todo").addEventListener(("click"), (e) => {
     listTodo(fetchTodo())
 })
 document.querySelector(".remove-all").addEventListener(("click"), () => {
-    localStorage.removeItem("todos")
-    listTodo(fetchTodo())
-    noTodos()
+    let bool = confirm("Do you want to delete all the todo items?")
+    if (bool === true) {
+        localStorage.removeItem("todos")
+        listTodo(fetchTodo())
+        noTodos()
+    }
 })

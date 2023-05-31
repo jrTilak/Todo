@@ -1,20 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Charm&family=Kaushan+Script&display=swap');
-
-:root {
-    --primary: #EA40A4;
-    --business: #3a82ee;
-    --personal: var(--primary);
-    --light: #EEE;
-    --grey: #888;
-    --dark: #313154;
-    --danger: #ff5b57;
-
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-    --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -26,10 +10,6 @@
 
 h1 {
     font-family: 'Kaushan Script', cursive;
-}
-
-::placeholder {
-    font-family: 'Caveat', cursive;
 }
 
 input {
@@ -44,8 +24,10 @@ i {
     background: none;
 }
 
+::placeholder {
+    font-family: 'Caveat', cursive;
+}
 
-/* body  */
 body {
     display: flex;
     flex-direction: column;
@@ -103,7 +85,7 @@ h1.greetings input {
     justify-content: center;
     background-color: #FFF;
     padding: .5rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     cursor: pointer;
     width: 10rem;
@@ -121,13 +103,14 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 999px;
-    border: 2px solid var(--business);
-    box-shadow: var(--business-glow);
+    border: 2px solid #3a82ee;
+    box-shadow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+    ;
 }
 
 .bubble.personal {
-    border-color: var(--personal);
-    box-shadow: var(--personal-glow);
+    border-color: #EA40A4;
+    box-shadow: 0px 0px 4px rgba(58, 130, 238, 0.75);
 }
 
 .bubble::after {
@@ -136,15 +119,16 @@ input[type="checkbox"] {
     opacity: 0;
     width: 0px;
     height: 0px;
-    background-color: var(--business);
-    box-shadow: var(--business-glow);
+    background-color: #3a82ee;
+    box-shadow: 0px 0px 4px rgba(234, 64, 164, 0.75);
     border-radius: 999px;
     transition: 0.2s ease-in-out;
 }
 
 .bubble.personal::after {
-    background-color: var(--personal);
-    box-shadow: var(--personal-glow);
+    background-color: #EA40A4;
+    ;
+    box-shadow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
 
 input:checked~.bubble::after {
@@ -154,7 +138,7 @@ input:checked~.bubble::after {
 }
 
 .create-todo .options label div {
-    color: var(--dark);
+    color: #313154;
     font-size: 1.125rem;
     padding-left: .5rem;
     background: #fff;
@@ -208,7 +192,7 @@ button.remove-all {
     background-color: #FFF;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
 }
 
@@ -224,7 +208,7 @@ button.remove-all {
 }
 
 .todo-item .todo-content input {
-    color: var(--dark);
+    color: #313154;
     font-size: 1.125rem;
     border: none;
     background: none;
@@ -252,7 +236,8 @@ button.remove-all {
 
 .todo-item .actions .edit {
     margin-right: 0.5rem;
-    background-color: var(--primary);
+    background-color: #EA40A4;
+    ;
 }
 
 .actions button i {
@@ -261,7 +246,7 @@ button.remove-all {
 }
 
 .todo-item .actions .delete {
-    background-color: var(--danger);
+    background-color: #ff5b57;
 }
 
 .todo-item.done .todo-content input {
@@ -346,6 +331,7 @@ button.remove-all {
     }
 }
 
+/* utility class  */
 .flex {
     display: flex;
     justify-content: center;
