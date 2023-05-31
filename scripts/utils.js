@@ -22,7 +22,7 @@ let getTodo = () => {
     let content = form.elements.content.value;
     if (content !== "") {
         let createdAt = new Date().getTime()
-        let newTodo = new Todo(content, category, createdAt)
+        let newTodo = new Todo(content, createdAt)
         return newTodo;
     }
     return null;
