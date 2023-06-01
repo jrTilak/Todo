@@ -1,6 +1,6 @@
-# [Todo App](http://127.0.0.1:5500/index.html)
+# [Todo App](https://todo-jrtilak.netlify.app/)
 ### Created By: [jrTilak](https://github.com/jrTilak)
-The Todo App is a simple web application that allows users to create and manage their todo items. It provides an intuitive interface for adding, editing, and deleting todo items, as well as marking them as completed.
+The Todo App is a simple web application that allows users to create and manage their todo items using local storage API. It provides an intuitive interface for adding, editing, and deleting todo items, as well as marking them as completed.
 
 ----
 ## Features
@@ -21,7 +21,7 @@ The Todo App is a simple web application that allows users to create and manage 
 
 To use the Todo App, follow these steps:
 
-1. Visit [Todo](http://127.0.0.1:5500/index.html) or you can clone this repo.
+1. Visit [Todo](https://todo-jrtilak.netlify.app/) or you can clone this repo.
 
 3. Enter your name in the input field under the "What's up" heading.
 
