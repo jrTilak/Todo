@@ -2,6 +2,7 @@
 ### Created By: [jrTilak](https://github.com/jrTilak)
 The Todo App is a simple web application that allows users to create and manage their todo items using local storage API. It provides an intuitive interface for adding, editing, and deleting todo items, as well as marking them as completed.
 
+![preview](https://repository-images.githubusercontent.com/646800354/bf3c684f-54d9-4ea1-b86c-32865ba3fa21)
 ----
 ## Features
 
