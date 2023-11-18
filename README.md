@@ -36,7 +36,7 @@
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#functions-description">Functions Descriptio</a></li>
+    <li><a href="#functions-description">Functions Description</a></li>
     <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
