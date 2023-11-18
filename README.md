@@ -1,9 +1,57 @@
-# [Todo App](https://todo-jrtilak.netlify.app/)
-### Created By: [jrTilak](https://github.com/jrTilak)
-The Todo App is a simple web application that allows users to create and manage their todo items using local storage API. It provides an intuitive interface for adding, editing, and deleting todo items, as well as marking them as completed.
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://todo.thapatilak.com.np/">
+    <img src="https://play-lh.googleusercontent.com/KNInXD9XRXJPXtWEGWvNf_MnT664xCO3yBr-KP9wmogIPplkyQcZLahhCmf3h1mtldmz" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Todo - using localstorage API</h3>
+
+  <p align="center">
+    A simple todo web application that allows users to create and manage their todo items using local storage API. It provides an intuitive interface for adding, editing, and deleting todo items, as well as marking them as completed.
+    <br />
+    <a href="https://todo.thapatilak.com.np/">View Demo</a>
+    ·
+    <a href="https://github.com/jrTilak/todo/issues">Request Feature</a>
+    ·
+    <a href="https://thapatilak.com.np/projects/...">Read More</a>
+  </p>
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a> </li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#functions-description">Functions Descriptio</a></li>
+    <li><a href="#credits">Credits</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
 ![preview](https://repository-images.githubusercontent.com/646800354/bf3c684f-54d9-4ea1-b86c-32865ba3fa21)
 ----
+
+## Built With
+[![Javascript][Javascript]][Javascript-url] [![CSS][CSS]][CSS-url] [![HTML][HTML]][HTML-url]
+
 ## Features
 
 - **User-friendly interface**: The app has a clean and intuitive design, making it easy for users to navigate and interact with the todo list.
@@ -22,7 +70,7 @@ The Todo App is a simple web application that allows users to create and manage 
 
 To use the Todo App, follow these steps:
 
-1. Visit [Todo](https://todo-jrtilak.netlify.app/) or you can clone this repo.
+1. Visit [Todo](https://todo.thapatilak.com.np/) or you can clone this repo.
 
 3. Enter your name in the input field under the "What's up" heading.
 
@@ -31,17 +79,6 @@ To use the Todo App, follow these steps:
 5. Use the edit, checkbox, and delete buttons to edit, mark as completed, and delete todo items respectively.
 
 6. Enjoy managing your todo list!
-
----
-## Technologies Used
-
-The Todo App is built using the following technologies:
-
-- HTML: For creating the structure and elements of the web page.
-
-- CSS: For styling the web page and making it visually appealing.
-
-- JavaScript: For adding interactivity and functionality to the app.
 
 ---
 ## Functions Description
@@ -101,3 +138,23 @@ The Todo App is built using the following technologies:
 ## Credits
 1. [Favicon](https://play-lh.googleusercontent.com/KNInXD9XRXJPXtWEGWvNf_MnT664xCO3yBr-KP9wmogIPplkyQcZLahhCmf3h1mtldmz)
 2. [Boxicons](https://boxicons.com/)
+
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/jrtilak/todo.svg?style=for-the-badge
+[contributors-url]: https://github.com/jrtilak/todo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jrtilak/todo.svg?style=for-the-badge
+[forks-url]: https://github.com/jrtilak/todo/network/members
+[stars-shield]: https://img.shields.io/github/stars/jrtilak/todo.svg?style=for-the-badge
+[stars-url]: https://github.com/jrtilak/todo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jrtilak/todo.svg?style=for-the-badge
+[issues-url]: https://github.com/jrtilak/todo/issues
+[Javascript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[Javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[CSS]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
+[CSS-url]: https://developer.mozilla.org/en-US/docs/Web/css
+[HTML]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
+[HTML-url]: https://developer.mozilla.org/en-US/docs/Web/html
+[Node.js]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org/en
+
+
