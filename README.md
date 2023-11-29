@@ -131,10 +131,6 @@ To use the Todo App, follow these steps:
 - Fetches the existing todo list, filters out the item with the matching `createdAt`, converts the updated list to JSON format, and stores it back in the local storage.
 
 ---
-## Credits
-1. [Favicon](https://play-lh.googleusercontent.com/KNInXD9XRXJPXtWEGWvNf_MnT664xCO3yBr-KP9wmogIPplkyQcZLahhCmf3h1mtldmz)
-2. [Boxicons](https://boxicons.com/)
-
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/jrtilak/todo.svg?style=for-the-badge
 [contributors-url]: https://github.com/jrtilak/todo/graphs/contributors
