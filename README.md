@@ -18,10 +18,6 @@
     A simple todo web application that allows users to create and manage their todo items using local storage API. It provides an intuitive interface for adding, editing, and deleting todo items, as well as marking them as completed.
     <br />
     <a href="https://todo.thapatilak.com.np/">View Demo</a>
-    ·
-    <a href="https://github.com/jrTilak/todo/issues">Request Feature</a>
-    ·
-    <a href="https://thapatilak.com.np/projects/...">Read More</a>
   </p>
 </div>
 
